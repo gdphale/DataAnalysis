@@ -1,8 +1,7 @@
-load cam1_1.mat
 
 
 nmvid = normalizeColorVid(vidFrames1_1);
-nmvid = nmvid(:, floor(size(nmvid, 2)/3):(size(nmvid, 2)-floor(size(nmvid, 2)/3)), :);
+nmvid = nmvid(floor(size(nmvid, 1)/3):end , floor(size(nmvid, 2)/3):(size(nmvid, 2)-floor(size(nmvid, 2)/3)), :);
 snmvid = imresize(nmvid, 0.4);
 tsnmvid = threshold(snmvid);
 

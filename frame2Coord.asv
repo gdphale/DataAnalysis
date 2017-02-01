@@ -1,0 +1,10 @@
+function M = frame2Coord(A)
+
+% multiply by a thousand so that when the distance is computed, the
+% contents of the pixel is weighted more heavily that the index
+values = reshape(A, [size(A,1)*size(A,2) 1]) .*1000;
+xs = repmat(1:size(A,1), [1 size(A,2) ] );
+ys = repmat(1:size(A,2), [ 1 size(A,1) ] )';
+M = [xs ys values];
+
+end

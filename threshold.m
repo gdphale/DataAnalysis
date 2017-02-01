@@ -1,6 +1,6 @@
 function m = threshold(A)
 
-thresh = 0.98;
+thresh = 0.99;
 
 s = size(A);
 A(A < thresh) = 0;
