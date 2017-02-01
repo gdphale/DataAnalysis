@@ -1,0 +1,9 @@
+function m = threshold(A)
+
+thresh = 0.985;
+
+s = size(A);
+A(A < thresh) = 0;
+m = reshape(A, s);
+
+end

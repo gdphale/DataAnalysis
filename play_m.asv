@@ -1,0 +1,11 @@
+function g = play_m(A)
+figure();
+
+
+if size()
+    for i = 1:size(A,4)
+        imshow(A(:,:,:,i));
+        pause(0.005)
+    end
+
+end
